@@ -28,7 +28,7 @@ df = load_data()
 # ---------------------------
 # SIDEBAR INFO
 # ---------------------------
-st.sidebar.header("👤 About Developer")
+st.sidebar.header("👤 Python Developer")
 st.sidebar.markdown("""
 **Name:** Pratik Banarse  
 **LinkedIn:** [LinkedIn Profile](https://www.linkedin.com)  
