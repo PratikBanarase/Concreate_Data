@@ -27,10 +27,10 @@ df = load_data()
 
 st.sidebar.header("👤 Python Devloper")
 st.sidebar.markdown(
-**Name:** Pratik Banarse  
-**LinkedIn:** [LinkedIn Profile](https://www.linkedin.com)  
-**GitHub:** [GitHub Profile](https://github.com)  
-**Gmail:** pratikbanarse@gmail.com
+Name: Pratik Banarse  
+LinkedIn: [LinkedIn Profile](https://www.linkedin.com)  
+GitHub: [GitHub Profile](https://github.com)  
+Gmail: pratikbanarse@gmail.com
 )
 
 # ---------------------------
