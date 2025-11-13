@@ -81,4 +81,24 @@ age = st.sidebar.number_input("Age (days)", 1, 365, 28)
 # ---------------------------
 input_data = np.array([[cement, slag, flyash, water, superplasticizer, coarseagg, fineagg, age]])
 
-if st.sidebar.button("🔮
+if st.sidebar.button("🔮 Predict Concrete Strength"):
+    lr_pred = lr_model.predict(input_data)[0]
+    gb_pred = gb_model.predict(input_data)[0]
+
+    st.success(f"**Linear Regression Prediction:** {lr_pred:.2f} MPa")
+    st.success(f"**Gradient Boosting Prediction:** {gb_pred:.2f} MPa")
+
+    # Model performance metrics
+    lr_r2 = r2_score(y_test, lr_model.predict(X_test))
+    gb_r2 = r2_score(y_test, gb_model.predict(X_test))
+
+    st.subheader("📊 Model Performance:")
+    st.write(f"**Linear Regression R²:** {lr_r2:.3f}")
+    st.write(f"**Gradient Boosting R²:** {gb_r2:.3f}")
+    st.write(f"**Gradient Boosting MSE:** {mean_squared_error(y_test, gb_model.predict(X_test)):.3f}")
+
+# ---------------------------
+# FOOTER
+# ---------------------------
+st.markdown("---")
+st.markdown("© 2025 Pratik Banarse | Machine Learning Streamlit App")
